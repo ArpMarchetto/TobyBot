@@ -1,31 +1,14 @@
-"use strict";
-
-const telegramBot = require('node-telegram-bot-api'),
-      dotenv      = require('dotenv').config(),
-      request     = require('superagent'),
-      cheerio     = require('cheerio'),
-      token       = process.env.TELEGRAM_API,
-      bot         = new telegramBot(token, {webHook: { port: process.env.PORT }});
-
-const url = process.env.APP_URL || 'https://toby-bot.herokuapp.com/';
-
-// Isso faz setup do webhook nos servidores do telegram
-bot.setWebHook(`${url}/bot${token}`);
+const TelegramBot = require('node-telegram-bot-api');
+const token = '862725699:AAEi2jR_obihgZByOGYEBQ4VBDfC0bFvpRE';
+const bot = new TelegramBot(token, {polling: true});
 
 bot.on('message', (msg) => {
-  let userID      = msg.chat.id,
-      messageUser = msg.text,
-      url         = 'https:\/\/explainshell.com/explain?cmd='+ messageUser;
-
-  request.get(url, (err, res) => {
-    if (err) throw err;
-
-    let $             = cheerio.load(res.text),
-        answer        = $('.help-box').text(),
-        errorMessage  = "Sorry, this command is invalid or unknown. Try another command.";
-
-    bot.sendMessage(userID, answer).catch((error) => {
-      bot.sendMessage(userID, errorMessage);
-    });
-  });
+         //significa que, ao receber mensagens, o bot vai fazer coisas
+	      
+	var Oi = "oi";
+	if (msg.text.toString().toLowerCase().indexOf(Oi) === 0) {
+	bot.sendMessage(msg.chat.id,"Olá, querido usuário");
+	}
+	
 });
+
