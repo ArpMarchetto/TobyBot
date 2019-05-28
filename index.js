@@ -1,25 +1,31 @@
-var TelegramBot = require( 'node-telegram-bot-api' ),
-    util = require('util'),
-    express = require('express'),
-    app     = express(),
-    schedule = require('node-schedule');
+"use strict";
 
-var TOKEN = process.env.862725699:AAEi2jR_obihgZByOGYEBQ4VBDfC0bFvpRE;
-var rule = new schedule.RecurrenceRule();
-var bot = new TelegramBot( TOKEN, { polling: true } );
+const telegramBot = require('node-telegram-bot-api'),
+      dotenv      = require('dotenv').config(),
+      request     = require('superagent'),
+      cheerio     = require('cheerio'),
+      token       = process.env.TELEGRAM_API,
+      bot         = new telegramBot(token, {webHook: { port: process.env.PORT }});
 
-app.set('port', (process.env.PORT || 5000));
+const url = process.env.APP_URL || 'https://toby-bot.herokuapp.com/';
 
-//For avoidong Heroku $PORT error
-app.get('/', function(request, response) {
-    var result = 'App is running'
-    response.send(result);
-}).listen(app.get('port'), function() {
-    console.log('App is running, server is listening on port ', app.get('port'));
+// Isso faz setup do webhook nos servidores do telegram
+bot.setWebHook(`${url}/bot${token}`);
+
+bot.on('message', (msg) => {
+  let userID      = msg.chat.id,
+      messageUser = msg.text,
+      url         = 'https:\/\/explainshell.com/explain?cmd='+ messageUser;
+
+  request.get(url, (err, res) => {
+    if (err) throw err;
+
+    let $             = cheerio.load(res.text),
+        answer        = $('.help-box').text(),
+        errorMessage  = "Sorry, this command is invalid or unknown. Try another command.";
+
+    bot.sendMessage(userID, answer).catch((error) => {
+      bot.sendMessage(userID, errorMessage);
+    });
+  });
 });
-
-bot.on('message', function(msg){
-  console.log('msg', msg);
-});
-
-bot.onText( /\/echo (.*)/, sendEcho);
