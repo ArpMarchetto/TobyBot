@@ -17,3 +17,7 @@ app.get('/', function(request, response) {
 }).listen(app.get('port'), function() {
     console.log('App is running, server is listening on port ', app.get('port'));
 });
+
+bot.on('message', function(msg){
+  console.log('msg', msg);
+});
