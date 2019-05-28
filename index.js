@@ -4,7 +4,7 @@ var TelegramBot = require( 'node-telegram-bot-api' ),
     app     = express(),
     schedule = require('node-schedule');
 
-var TOKEN = process.env.TELEGRAM_API;
+var TOKEN = process.env.862725699:AAEi2jR_obihgZByOGYEBQ4VBDfC0bFvpRE;
 var rule = new schedule.RecurrenceRule();
 var bot = new TelegramBot( TOKEN, { polling: true } );
 
@@ -21,3 +21,5 @@ app.get('/', function(request, response) {
 bot.on('message', function(msg){
   console.log('msg', msg);
 });
+
+bot.onText( /\/echo (.*)/, sendEcho);
