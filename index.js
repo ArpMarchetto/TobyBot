@@ -8,7 +8,7 @@ var TOKEN = process.env.TELEGRAM_API;
 var rule = new schedule.RecurrenceRule();
 var bot = new TelegramBot( TOKEN, { polling: true } );
 
-
+app.set('port', (process.env.PORT || 5000));
 //For avoiding Heroku $PORT error
 app.get('/', function(request, response) {
     var result = 'App is running'
@@ -16,7 +16,7 @@ app.get('/', function(request, response) {
 }).listen(app.get('port'), function() {
     console.log('App is running, server is listening on port ', app.get('port'));
 });
-app.set('port', (process.env.PORT || 5000));
+
 
 bot.on('message', (msg) => {
      //O comando acima diz que o bot recebe mensagens
