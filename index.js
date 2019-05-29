@@ -23,32 +23,36 @@ bot.on('message', (msg) => {
 	var ois = ["oi","olá","ola","oie", "e aí", "e ai"];
 	var tchaus = ["falou", "flw", "falow", "tchau", "adeus"];
 	var gots = ["daenerys", " got ", "game of thrones", "jon snow"];
-    
     var respostasGot = ['Amo a Daenerys, traçava ela todinha','Eu só gosto de Game of Thrones pq os nórdicos são muito macho. Dá até orgulho de ver uma geração dessa',
 			    'Casa Lannister é coisa de viado, vocês sabem, né?','Game of Thrones acabou do jeitinho que tinha que acabar', 
-				'Adorei esse final','Eu gosto da série da HBO pq tem tudo que um homem pode gostar: violência e peitos'];
-                
+				'Adorei esse final','Eu gosto da série da HBO pq tem tudo que um homem pode gostar: violência e peitos'];         
 	var x = Math.random()*100+1;
+	var randomGot = Math.floor(Math.random() * respostasGot.length) ;
     
-	for (var i = 0; i < ois.length; i++){
+	for (var i = 0; i < ois.length; i++){ //MENSAGENS DE OI
         if (msg.text.toString().toLowerCase().includes(ois[i])){
-		  if (x <50) {bot.sendMessage(msg.chat.id,"Fala meu leitão véio")}
-		  if (x >=50) {bot.sendMessage(msg.chat.id, "Coé, chapa")}
+		if (x <50) {bot.sendMessage(msg.chat.id,"Fala meu leitão véio")}
+		if (x >=50) {bot.sendMessage(msg.chat.id, "Coé, chapa")}
 		return;
 	   }
     }
-	for (var i = 0; i < tchaus.length; i++){
+	for (var i = 0; i < tchaus.length; i++){ //MENSAGENS DE TCHAU
         if (msg.text.toString().toLowerCase().includes(tchaus[i])){
-		  if (x <50) {bot.sendMessage(msg.chat.id,"Até a próxima, pela saco")}
+		if (x <50) {bot.sendMessage(msg.chat.id,"Até a próxima, pela saco")}
 		if (x >=50) {bot.sendMessage(msg.chat.id, "Vá curtir a praia de Copacabana, manin. Sem Kaô")}
-		  return;
+		return;
 	    }
     }
-	for (var i = 0; i < gots.length; i++){
+	for (var i = 0; i < gots.length; i++){ //MENSAGENS DE GOT
         if (msg.text.toString().toLowerCase().includes(gots[i])){
-		  bot.sendMessage(msg.chat.id, respostasGot[random1])
-		  return;	
+		bot.sendMessage(msg.chat.id, respostasGot[randomGot])
+		return;	
 	   }
     }
+	if(msg.from.id=='91863978'){ //QUANDO O IGOR RESPONDE
+		if(x < 75){bot.sendMessage(msg.chat.id, 'Ih, lá vem a poc...')}
+		if(x > 75){bot.sendMessage(msg.chat.id, 'Igor, manda umas foto de peito e churrasco aí pra mim')}
+        return;
+	}
 	
 });
