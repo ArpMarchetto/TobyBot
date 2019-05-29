@@ -59,9 +59,9 @@ bot.on('message', (msg) => {     //O comando acima diz o que o bot faz quando re
 	}
 });
 
-rule.second = 25;
+//rule.second = 25;
 var intMail = schedule.scheduleJob(rule, function(){
-    var answers = ["Carai, eu curto mesmo é uma brotheragem no banheiro"];
+    var answers = ["Carai, eu curto mesmo é uma brotheragem no banheiro", "Cês já fizeram um banheirão na estação? Só é zoado quando um zé ruela entra para atrapalhar"];
     var random1 = Math.floor(Math.random() * answers.length) ;
     var randomThing = answers[random1];
     bot.sendMessage("-1001259017807",randomThing);
