@@ -72,4 +72,7 @@ bot.on('message', (msg) => {     //O comando acima diz o que o bot faz quando re
 var imagensHomofobicas = ['https://i.ytimg.com/vi/tBl4InwUhBI/hqdefault.jpg','https://www.gaystarnews.com/wp-content/uploads/2018/06/MILLIE-BOBBY-BROWN-STRANGER-THINGS-TWITTER.jpg','https://www.thewrap.com/wp-content/uploads/2018/06/Screen-Shot-2018-06-13-at-2.00.30-PM.png',
 'https://www.pophatesflops.com/applications/core/interface/imageproxy/imageproxy.php?img=https://pbs.twimg.com/media/DfmYuSeUEAM_xwQ.jpg','https://i.kym-cdn.com/entries/icons/original/000/026/421/millie.jpg'];
 var randomMillie = Math.floor(Math.random() * imagensHomofobicas.length);
-bot.onText(/\/sabedoria (.*)/ sendPhoto(msg.chat.id, imagensHomofobicas[randomMillie]));
+var millie = function(msg, match){
+bot.sendPhoto(msg.chat.id, imagensHomofobicas[randomMillie]);
+}
+bot.onText( /\/sabedoria (.*)/, millie);
