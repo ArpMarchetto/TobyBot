@@ -30,12 +30,12 @@ bot.on('message', (msg) => {
 	var homofobia = ['homofobia não é crime, é bom senso', 'odiar gays não é preconceito, é inevitável', 'eu não sou homofóbico. Homofobia é crime e cadeia é coisa de viado'];
     var randomGay = Math.floor(Math.random() * homofobia.length);
 	
-	if (msg.text.toString().toLowerCase().includes(msg == 'oi' || msg == 'olá' || msg == 'e aí' || msg == 'ola')){ //MENSAGENS DE OI
+	if (msg.text.toLowerCase() == 'oi' || msg.text.toLowerCase() == 'olá' || msg.text.toLowerCase() == 'e aí' || msg.text.toLowerCase() == 'ola')){ //MENSAGENS DE OI
 		if (x <50) {bot.sendMessage(msg.chat.id,"Fala meu leitão véio")}
 		if (x >=50) {bot.sendMessage(msg.chat.id, "Coé, chapa")}
 		return;
 	}
-	if (msg.text.toString().toLowerCase().includes(msg == 'fui' || msg == 'adeus' || msg == 'tchau' || msg == 'falou')){ //MENSAGENS DE TCHAU
+	if (msg.text.toLowerCase() == 'fui' || msg.text.toLowerCase() == 'adeus' || msg.text.toLowerCase() == 'tchau' || msg.text.toLowerCase() == 'falou')){ //MENSAGENS DE TCHAU
 		if (x <50) {bot.sendMessage(msg.chat.id,"Até a próxima, pela saco")}
 		if (x >=50) {bot.sendMessage(msg.chat.id, "Vá curtir a praia de Copacabana, manin. Sem Kaô")}
 		return;
@@ -51,7 +51,7 @@ bot.on('message', (msg) => {
 		if(x > 85){bot.sendMessage(msg.chat.id, 'Igor, manda umas foto de peito e churrasco aí pra mim')}
         return;
 	}
-	if (msg.text.toString().toLowerCase().includes('homofobia' || 'homofóbico' || 'homofobico')){ //HOMOFOBIA
+	if (msg.text.toLowerCase().includes('homofobia') || msg.text.toLowerCase().includes('homofóbico') || msg.text.toLowerCase().includes('homofobico')){ //HOMOFOBIA
 		bot.sendMessage(msg.chat.id, homofobia[randomGay])
 		return;	
 	}
