@@ -18,8 +18,8 @@ app.get('/', function(request, response) {
 });
 
 
-bot.on('message', (msg) => {
-     //O comando acima diz o que o bot faz quando recebe mensagens
+bot.on('message', (msg) => {     //O comando acima diz o que o bot faz quando recebe mensagens
+	console.log('msg','msg');
 	var tchaus = ["falou", "flw", "falow", "tchau", "adeus"];
 	var gots = ["daenerys", " got", "game of thrones", "jon snow"];
     var respostasGot = ['Amo a Daenerys, traçava ela todinha','Eu só gosto de Game of Thrones pq os nórdicos são muito macho. Dá até orgulho de ver uma geração dessa',
@@ -27,7 +27,9 @@ bot.on('message', (msg) => {
 				'Adorei esse final','Eu gosto da série da HBO pq tem tudo que um homem pode gostar: violência e peitos'];         
 	var x = Math.random()*100+1;
 	var randomGot = Math.floor(Math.random() * respostasGot.length);
-	var homofobia = ['homofobia não é crime, é bom senso', 'odiar gays não é preconceito, é inevitável', 'eu não sou homofóbico. Homofobia é crime e cadeia é coisa de viado'];
+	var homofobia = ['Homofobia não é crime, é bom senso', 'odiar gays não é preconceito, é inevitável', 
+	'eu não sou homofóbico. Homofobia é crime e cadeia é coisa de viado', 'Eu odeio a palavra homofobia. Não é uma fobia. Porque eu teria medo de viado?', 'Deus fez os gays com o único propósito de queima-los.',
+	'E eu lá tenho medo de viado, caraio?','Eu nem sou homofóbico. Inclusive, tenho alguns amigos gays','Não precisa ficar contando para todo mundo que você é gay','Não tenho nada contra, só não curto ver dois marmanjos se beijando'];
     var randomGay = Math.floor(Math.random() * homofobia.length);
 	
 	if (msg.text.toLowerCase() == 'oi' || msg.text.toLowerCase() == 'olá' || msg.text.toLowerCase() == 'e aí' || msg.text.toLowerCase() == 'ola'){ //MENSAGENS DE OI
@@ -55,4 +57,12 @@ bot.on('message', (msg) => {
 		bot.sendMessage(msg.chat.id, homofobia[randomGay])
 		return;	
 	}
+});
+
+rule.second = 25;
+var intMail = schedule.scheduleJob(rule, function(){
+    var answers = ["Carai, eu curto mesmo é uma brotheragem no banheiro"];
+    var random1 = Math.floor(Math.random() * answers.length) ;
+    var randomThing = answers[random1];
+    bot.sendMessage("-1001259017807",randomThing);
 });
