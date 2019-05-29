@@ -26,5 +26,6 @@ bot.on('message', (msg) => {
 	if (msg.text.toString().toLowerCase().indexOf(Oi[0]){
 		if (x <50) {bot.sendMessage(msg.chat.id,"Fala meu leitão véio")}
 		if (x >=50) {bot.sendMessage(msg.chat.id, "Coé, chapa")}
-		return; } 
+		return
+	} 
 });
