@@ -3,12 +3,10 @@ const token = '862725699:AAEi2jR_obihgZByOGYEBQ4VBDfC0bFvpRE';
 const bot = new TelegramBot(token, {polling: true});
 
 bot.on('message', (msg) => {
-         //significa que, ao receber mensagens, o bot vai fazer coisas
-	      
-	var Oi = "oi";
-	if (msg.text.toString().toLowerCase().indexOf(Oi) === 0) {
-	bot.sendMessage(msg.chat.id,"Olá, querido usuário");
-	}
-	
+     //O comando acima diz que o bot recebe mensagens
+	 var Hi = "hi";
+	if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
+	bot.sendMessage(msg.chat.id,"Hello dear user");
+	}  
+	// Criou a variável Hi, que é quando o texto hi chegar ele vai responder Hello
 });
-
