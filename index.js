@@ -25,8 +25,8 @@ bot.on('message', (msg) => {
 	var GoT = ["Daenerys", "GoT", "Game of Thrones", "Jon Snow"];
 	var x = Math.random()*100+1;
 	for (var i = 0; i < Oi.length; i++)
-	for (var o = 0; o < Oi.length; o++)
-	for (var u = 0; u < Oi.length; u++)	
+	for (var o = 0; o < Tchau.length; o++)
+	for (var u = 0; u < GoT.length; u++)	
 	
 	if (msg.text.toString().toLowerCase().includes(Oi[i])){
 		if (x <50) {bot.sendMessage(msg.chat.id,"Fala meu leitão véio")}
