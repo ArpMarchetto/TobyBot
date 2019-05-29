@@ -20,7 +20,7 @@ app.get('/', function(request, response) {
 
 bot.on('message', (msg) => {
      //O comando acima diz o que o bot faz quando recebe mensagens
-	var Oi = "oi", "olá", "ola", "oie", "oier";
+	var Oi = "oi", "ola", "oie", "oier";
 	var x = Math.random()*100+1;
 	
 	if (msg.text.toString().toLowerCase().indexOf(Oi) === 0) {
