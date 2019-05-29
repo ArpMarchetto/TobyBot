@@ -28,19 +28,19 @@ bot.on('message', (msg) => {
 	for (var o = 0; o < Oi.length; o++)
 	for (var u = 0; u < Oi.length; u++)	
 	
-	if (msg.text.toString().toLowerCase().indexOf(Oi[i])){
+	if (msg.text.toString().toLowerCase().includes(Oi[i])){
 		if (x <50) {bot.sendMessage(msg.chat.id,"Fala meu leitão véio")}
 		if (x >=50) {bot.sendMessage(msg.chat.id, "Coé, chapa")}
 		return;
 	}
 	
-	if (msg.text.toString().toLowerCase().indexOf(Tchau[o])){
+	if (msg.text.toString().toLowerCase().includes(Tchau[o])){
 		if (x <50) {bot.sendMessage(msg.chat.id,"Até a próxima, pela saco")}
 		if (x >=50) {bot.sendMessage(msg.chat.id, "Vá curtir a praia de Copacabana, manin. Sem Kaô")}
 		return;
 	}
 	
-	if (msg.text.toString().toLowerCase().indexOf(GoT[u])){
+	if (msg.text.toString().toLowerCase().includes(GoT[u])){
 		var vetorGoT = ['Amo a Daenerys, traçava ela todinha','Eu só gosto de Game of Thrones pq os nórdicos são muito macho. Dá até orgulho de ver uma geração dessa',
 			    'Casa Lannister é coisa de viado, vocês sabem, né?','Game of Thrones acabou do jeitinho que tinha que acabar', 
 				'Adorei esse final','Eu gosto da série da HBO pq tem tudo que um homem pode gostar: violência e peitos']
