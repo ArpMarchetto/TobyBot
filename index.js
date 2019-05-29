@@ -37,14 +37,14 @@ bot.on('message', (msg) => {
 		return;
 	   }
     }
-	for (var i = 0; o < tchaus.length; i++){
+	for (var i = 0; i < tchaus.length; i++){
         if (msg.text.toString().toLowerCase().includes(tchaus[i])){
 		  if (x <50) {bot.sendMessage(msg.chat.id,"Até a próxima, pela saco")}
 		if (x >=50) {bot.sendMessage(msg.chat.id, "Vá curtir a praia de Copacabana, manin. Sem Kaô")}
 		  return;
 	    }
     }
-	for (var i = 0; u < gots.length; i++){
+	for (var i = 0; i < gots.length; i++){
         if (msg.text.toString().toLowerCase().includes(gots[i])){
 		  bot.sendMessage(msg.chat.id, respostasGot[random1])
 		  return;	
