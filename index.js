@@ -20,6 +20,7 @@ app.get('/', function(request, response) {
 
 bot.on('message', (msg) => {     //O comando acima diz o que o bot faz quando recebe mensagens
 	console.log('msg','msg');
+	
 	var tchaus = ["falou", "flw", "falow", "tchau", "adeus"];
 	var gots = ["daenerys", " got", "game of thrones", "jon snow"];
     var respostasGot = ['Amo a Daenerys, traçava ela todinha','Eu só gosto de Game of Thrones pq os nórdicos são muito macho. Dá até orgulho de ver uma geração dessa',
@@ -60,8 +61,8 @@ bot.on('message', (msg) => {     //O comando acima diz o que o bot faz quando re
 });
 
 //rule.second = 25;
-var intMail = schedule.scheduleJob(rule, function(){
-    var answers = ["Carai, eu curto mesmo é uma brotheragem no banheiro", "Cês já fizeram um banheirão na estação? Só é zoado quando um zé ruela entra para atrapalhar"];
+	var intMail = schedule.scheduleJob(rule, function(){
+    //var answers = ["Carai, eu curto mesmo é uma brotheragem no banheiro", "Cês já fizeram um banheirão na estação? Só é zoado quando um zé ruela entra para atrapalhar"];
     var random1 = Math.floor(Math.random() * answers.length) ;
     var randomThing = answers[random1];
     bot.sendMessage("-1001259017807",randomThing);
