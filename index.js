@@ -20,10 +20,10 @@ app.get('/', function(request, response) {
 
 bot.on('message', (msg) => {
      //O comando acima diz o que o bot faz quando recebe mensagens
-	var Oi = "oi";
+	var Oi = ["oi","olá","ola", "oie"];
 	var x = Math.random()*100+1;
 	
-	if (msg.text.toString().toLowerCase().indexOf(Oi) === 0) {
+	if (msg.text.toString().toLowerCase().indexOf(Oi[1]) === 0) {
 		if (x <50) {bot.sendMessage(msg.chat.id,"Fala meu leitão véio")}
 		if (x >=50) {bot.sendMessage(msg.chat.id, "Coé, chapa")}
 		return; } 
