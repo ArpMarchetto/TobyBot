@@ -1,0 +1,19 @@
+{
+  "name": "tobybot",
+  "version": "0.1.0",
+  "description": "Um bot de testes",
+  "dependencies": {
+    "express":"",
+    "node-schedule":"",
+    "cheerio": "^0.22.0",
+    "dotenv": "^4.0.0",
+    "global": "^4.3.1",
+    "node-telegram-bot-api": "^0.27.0",
+    "superagent": "^3.5.2"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "telegram-bot"
+  ]
+}
