@@ -30,7 +30,7 @@ bot.on('message', (msg) => {
 	var homofobia = ['homofobia não é crime, é bom senso', 'odiar gays não é preconceito, é inevitável', 'eu não sou homofóbico. Homofobia é crime e cadeia é coisa de viado'];
     var randomGay = Math.floor(Math.random() * homofobia.length);
 	
-	if (msg.text.toLowerCase() == 'oi' || msg.text.toLowerCase() == 'olá' || msg.text.toLowerCase() == 'e aí' || msg.text.toLowerCase() == 'ola')){ //MENSAGENS DE OI
+	if (msg.text.toLowerCase() == 'oi' || msg.text.toLowerCase() == 'olá' || msg.text.toLowerCase() == 'e aí' || msg.text.toLowerCase() == 'ola'){ //MENSAGENS DE OI
 		if (x <50) {bot.sendMessage(msg.chat.id,"Fala meu leitão véio")}
 		if (x >=50) {bot.sendMessage(msg.chat.id, "Coé, chapa")}
 		return;
