@@ -19,10 +19,31 @@ app.get('/', function(request, response) {
 
 
 bot.on('message', (msg) => {
-     //O comando acima diz que o bot recebe mensagens
-	 var Hi = "hi";
-	if (msg.text.toString().toLowerCase().indexOf(Hi) === 0) {
-	bot.sendMessage(msg.chat.id,"Hello dear user");
+     //O comando acima diz o que o bot faz quando recebe mensagens
+	var Oi = "oi", "olá", "ola", "oie", "oier";
+	var Tchau = "falou", "flw", "falow", "tchau", "adeus";
+	var x = Math.random()*100+1;
+	var GoT = "Daenerys", "GoT", "Game of Thrones";
+	
+	if (msg.text.toString().toLowerCase().indexOf(Oi) === 0) {
+		if (x <=50) {bot.sendMessage(msg.chat.id,"Fala meu leitão véio")}
+		if (x >50) {bot.sendMessage(msg.chat.id, "Coé, chapa")}
+		return; }
+		
+	if (msg.text.toString().toLowerCase().indexOf(Tchau) === 0) {
+		if (x <=50) {bot.sendMessage(msg.chat.id,"Até a próxima, pela saco")}
+		if (x >50) {bot.sendMessage(msg.chat.id, "Vá curtir a praia de Copacabana, manin")}
+		return; }
+	
+	if(msg.text.toString().toLowerCase().indexOf(GoT) === 0) {
+		var vetor = ['Amo a Daenerys, traçava ela todinha','Eu só gosto de Game of Thrones pq os nórdicos são muito macho. Dá até orgulho de ver uma geração dessa',
+			    'Casa Lannister é coisa de viado, vocês sabem, né?','Game of Thrones acabou do jeitinho que tinha que acabar', 'Adorei esse final','Eu gosto da série da HBO pq tem tudo que um homem pode gostar: violência e peitos']
+		bot.sendMessage(vetor[random1])
+		return;	}
+
+	if(msg.text.toString().includes('homofobia'){
+		var vetor = ['aaaa odeio gays']
+		bot.sendMessage(vetor[random1])
+		return; }
 	}  
-	// Criou a variável Hi, que é quando o texto hi chegar ele vai responder Hello
 });
