@@ -35,7 +35,7 @@ bot.on('message', (msg) => {
 		if (x >=50) {bot.sendMessage(msg.chat.id, "Coé, chapa")}
 		return;
 	}
-	if (msg.text.toLowerCase() == 'fui' || msg.text.toLowerCase() == 'adeus' || msg.text.toLowerCase() == 'tchau' || msg.text.toLowerCase() == 'falou')){ //MENSAGENS DE TCHAU
+	if (msg.text.toLowerCase() == 'fui' || msg.text.toLowerCase() == 'adeus' || msg.text.toLowerCase() == 'tchau' || msg.text.toLowerCase() == 'falou'){ //MENSAGENS DE TCHAU
 		if (x <50) {bot.sendMessage(msg.chat.id,"Até a próxima, pela saco")}
 		if (x >=50) {bot.sendMessage(msg.chat.id, "Vá curtir a praia de Copacabana, manin. Sem Kaô")}
 		return;
