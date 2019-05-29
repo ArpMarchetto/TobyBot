@@ -44,7 +44,7 @@ bot.on('message', (msg) => {
 		var vetorGoT = ['Amo a Daenerys, traçava ela todinha','Eu só gosto de Game of Thrones pq os nórdicos são muito macho. Dá até orgulho de ver uma geração dessa',
 			    'Casa Lannister é coisa de viado, vocês sabem, né?','Game of Thrones acabou do jeitinho que tinha que acabar', 
 				'Adorei esse final','Eu gosto da série da HBO pq tem tudo que um homem pode gostar: violência e peitos']
-				{bot.sendMessage(msg.chat.id, vetorGoT[random1])}
+		bot.sendMessage(msg.chat.id, vetorGoT[random1])
 		return;	
 	}
 	
