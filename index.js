@@ -24,7 +24,7 @@ bot.on('message', (msg) => {
 	var x = Math.random()*100+1;
 	for (var i = 0; i < Oi.length; i++) {
 		
-   	if (msg.text.toString().toLowerCase().indexOf(Oi[i]){
+   	if (msg.text.toString().toLowerCase().indexOf(Oi(i)){
 		if (x <50) {bot.sendMessage(msg.chat.id,"Fala meu leitão véio")}
 		if (x >=50) {bot.sendMessage(msg.chat.id, "Coé, chapa")}
 		return; } 
