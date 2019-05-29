@@ -39,8 +39,7 @@ bot.on('message', (msg) => {
 		if (x <50) {bot.sendMessage(msg.chat.id,"Até a próxima, pela saco")}
 		if (x >=50) {bot.sendMessage(msg.chat.id, "Vá curtir a praia de Copacabana, manin. Sem Kaô")}
 		return;
-	    }
-    }
+	}
 	for (var i = 0; i < gots.length; i++){ //MENSAGENS DE GOT
         if (msg.text.toString().toLowerCase().includes(gots[i])){
 		bot.sendMessage(msg.chat.id, respostasGot[randomGot])
