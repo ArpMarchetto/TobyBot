@@ -78,8 +78,14 @@ var sabedoria = function(msg, match){
 
 //
 var informacoes = function(msg, match){
-    bot.sendMessage(chatId, "Welcome", {reply_markup: {keyboard: [["Sample text", "Second sample"], ["Keyboard"], ["Fechar o teclado"]]}
-	)}
+     bot.sendMessage(chatId, "Welcome", {
+         "reply_markup": {
+             "keyboard": [
+                 ["Sample text", "Second sample"],
+                 ["Keyboard"], ["I'm robot"]
+             ]
+            }
+    })
 };
 
 
