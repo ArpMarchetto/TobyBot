@@ -50,12 +50,16 @@ bot.on('message', (msg) => {     //O comando acima diz o que o bot faz quando re
 	   }
     }
 	if(msg.from.id=='91863978'){ //QUANDO O IGOR RESPONDE
-		if(x < 15){bot.sendMessage(msg.chat.id, 'Ih, lá vem a poc...')}
-		if(x > 85){bot.sendMessage(msg.chat.id, 'Igor, manda umas foto de peito e churrasco aí pra mim')}
+		if(x < 10){bot.sendMessage(msg.chat.id, 'Ih, lá vem a poc...')}
+		if(x > 90){bot.sendMessage(msg.chat.id, 'Igor, manda umas foto de peito e churrasco aí pra mim')}
         return;
 	}
 	if (msg.text.toLowerCase().includes('homofobia') || msg.text.toLowerCase().includes('homofóbico') || msg.text.toLowerCase().includes('homofobico')){ //HOMOFOBIA
 		bot.sendMessage(msg.chat.id, homofobia[randomGay])
+		return;	
+	}
+	if (msg.text.toLowerCase().includes('deivison') || msg.text.toLowerCase().includes('foucalt')){ //DEIVISON
+		bot.sendMessage(msg.chat.id,"UMA BICHONA, NÉ")
 		return;	
 	}
 });
