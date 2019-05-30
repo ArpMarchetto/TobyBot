@@ -103,5 +103,3 @@ var start = function (msg, match){
 bot.onText( /\/start/, start);
 bot.onText ( /\/info/, informacoes);
 //
-
-bot.onText( /\/sabedoria/, sabedoria);
