@@ -77,7 +77,7 @@ var sabedoria = function(msg, match){
 
 //
 var informacoes = function(msg, match){
-     bot.sendMessage(chatId, "Você quer receber mais informações sobre a Mafagafo? Clique em uma das opções abaixo: ", {
+     bot.sendMessage(msg.chat.id, "Você quer receber mais informações sobre a Mafagafo? Clique em uma das opções abaixo: ", {
          "reply_markup": {
              "keyboard": [
                  ["Mafagafo", "Pio", "Faísca"],
