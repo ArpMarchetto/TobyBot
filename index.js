@@ -7,6 +7,7 @@ var TelegramBot = require( 'node-telegram-bot-api' ),
 var TOKEN = process.env.TELEGRAM_API;
 var rule = new schedule.RecurrenceRule();
 var bot = new TelegramBot( TOKEN, { polling: true } );
+var chatId = msg.chat.id;
 
 //For avoiding Heroku $PORT error
 app.set('port', (process.env.PORT || 5000));
