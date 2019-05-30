@@ -84,7 +84,7 @@ var informacoes = function(msg, match){
                  ["Clube de Escrita"], ["Contribua no Catarse"]
              ]
             }
-    })
+    });
 	if (msg.text.toLowerCase().includes('Mafagafo')){ //OPÇÕES - MAFAGAFO
 		bot.sendMessage(msg.chat.id, "A Mafagafo é uma revista que publica contos e noveletas de fantasia e ficção científica - e já possui dois filhotinhos, a Faísca e o Pio", {
 		"reply_markup": {
@@ -92,7 +92,7 @@ var informacoes = function(msg, match){
 			["Site"], ["Twitter"], ["Quero publicar"], ["Última edição"], ["Retornar"]
 			]
 		}
-	})
+	});
 };
 
 
@@ -103,3 +103,4 @@ var start = function (msg, match){
 bot.onText( /\/start/, start);
 bot.onText ( /\/info/, informacoes);
 //
+bot.onText( /\/sabedoria/, sabedoria);
