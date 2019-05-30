@@ -58,7 +58,7 @@ bot.on('message', (msg) => {     //O comando acima diz o que o bot faz quando re
 		bot.sendMessage(msg.chat.id, homofobia[randomGay])
 		return;	
 	}
-	if (msg.text.toLowerCase().includes('deivison') || msg.text.toLowerCase().includes('foucalt')){ //DEIVISON
+	if (msg.text.toLowerCase().includes('deivison') || msg.text.toLowerCase().includes('foucault')){ //DEIVISON
 		bot.sendMessage(msg.chat.id,"UMA BICHONA, NÉ")
 		return;	
 	}
