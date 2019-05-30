@@ -76,15 +76,23 @@ var sabedoria = function(msg, match){
 }
 
 //
-var info = function(msg, match){
-     bot.sendMessage(msg.chat.id, "Welcome", {
+var informacoes = function(msg, match){
+     bot.sendMessage(chatId, "Você quer receber mais informações sobre a Mafagafo? Clique em uma das opções abaixo: ", {
          "reply_markup": {
              "keyboard": [
-                 ["Sample text", "Second sample"],
-                 ["Keyboard"], ["I'm robot"]
+                 ["Mafagafo", "Pio", "Faísca"],
+                 ["Clube de Escrita"], ["Contribua no Catarse"]
              ]
             }
     })
+	if (msg.text.toLowerCase().includes('Mafagafo')){ //OPÇÕES - MAFAGAFO
+		bot.sendMessage(msg.chat.id, "A Mafagafo é uma revista que publica contos e noveletas de fantasia e ficção científica - e já possui dois filhotinhos, a Faísca e o Pio", {
+		"reply_markup": {
+			"inline_keyboard": [
+			["Site"], ["Twitter"], ["Quero publicar"], ["Última edição"], ["Retornar"]
+			]
+		}
+	})
 };
 
 
@@ -93,7 +101,7 @@ var start = function (msg, match){
 };
 
 bot.onText( /\/start/, start);
-bot.onText ( /\/info/, info);
+bot.onText ( /\/info/, informacoes);
 //
 
 bot.onText( /\/sabedoria/, sabedoria);
