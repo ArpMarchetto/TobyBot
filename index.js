@@ -93,7 +93,7 @@ var start = function (msg, match){
 };
 
 bot.onText( /\/start/, start);
-bot.onText ( /\/info/, infor;
+bot.onText ( /\/info/, info);
 //
 
 bot.onText( /\/sabedoria/, sabedoria);
