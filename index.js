@@ -92,7 +92,7 @@ var informacoes = function(msg, match){
 			["Site"], ["Twitter"], ["Quero publicar"], ["Última edição"], ["Retornar"]
 			]
 			}
-	 	}
+	 	})
 	});
 };
 
