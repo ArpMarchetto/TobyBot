@@ -76,7 +76,7 @@ var sabedoria = function(msg, match){
 }
 
 //
-var informacoes = function(msg, match){
+var info = function(msg, match){
      bot.sendMessage(msg.chat.id, "Welcome", {
          "reply_markup": {
              "keyboard": [
@@ -93,7 +93,7 @@ var start = function (msg, match){
 };
 
 bot.onText( /\/start/, start);
-bot.onText ( /\/info/, informacoes);
+bot.onText ( /\/info/, infor;
 //
 
 bot.onText( /\/sabedoria/, sabedoria);
