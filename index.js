@@ -93,7 +93,7 @@ var informacoes = function(msg, match){
 			]
 			}
 	 	})
-	});
+	};
 };
 
 
