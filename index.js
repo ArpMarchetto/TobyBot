@@ -87,11 +87,12 @@ var informacoes = function(msg, match){
     });
 	if (msg.text.toLowerCase().includes('Mafagafo')){ //OPÇÕES - MAFAGAFO
 		bot.sendMessage(msg.chat.id, "A Mafagafo é uma revista que publica contos e noveletas de fantasia e ficção científica - e já possui dois filhotinhos, a Faísca e o Pio", {
-		"reply_markup": {
+			"reply_markup": {
 			"inline_keyboard": [
 			["Site"], ["Twitter"], ["Quero publicar"], ["Última edição"], ["Retornar"]
 			]
-		}
+			}
+	 	}
 	});
 };
 
