@@ -75,4 +75,19 @@ var sabedoria = function(msg, match){
     console.log(imagensHomofobicas[Math.floor(Math.random() * imagensHomofobicas.length)]);
 }
 
+//
+var informacoes = function(msg, match){
+    bot.sendMessage(chatId, "Welcome", {reply_markup: {keyboard: [["Sample text", "Second sample"], ["Keyboard"], ["Fechar o teclado"]]}
+	)}
+};
+
+
+var start = function (msg, match){
+	bot.sendMessage(chatId, "Olá, tudo bem? Eu sou o Mafagabot - um tio postiço dos mafagafinhos");
+};
+
+bot.onText( /\/start/, start);
+bot.onText ( /\/info/, informacoes);
+//
+
 bot.onText( /\/sabedoria/, sabedoria);
