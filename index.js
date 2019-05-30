@@ -7,7 +7,6 @@ var TelegramBot = require( 'node-telegram-bot-api' ),
 var TOKEN = process.env.TELEGRAM_API;
 var rule = new schedule.RecurrenceRule();
 var bot = new TelegramBot( TOKEN, { polling: true } );
-var chatId = msg.chat.id;
 
 //For avoiding Heroku $PORT error
 app.set('port', (process.env.PORT || 5000));
@@ -78,7 +77,7 @@ var sabedoria = function(msg, match){
 
 //
 var informacoes = function(msg, match){
-     bot.sendMessage(chatId, "Welcome", {
+     bot.sendMessage(msg.chat.id, "Welcome", {
          "reply_markup": {
              "keyboard": [
                  ["Sample text", "Second sample"],
@@ -90,7 +89,7 @@ var informacoes = function(msg, match){
 
 
 var start = function (msg, match){
-	bot.sendMessage(chatId, "Olá, tudo bem? Eu sou o Mafagabot - um tio postiço dos mafagafinhos");
+	bot.sendMessage(msg.chat.id, "Olá, tudo bem? Eu sou o Mafagabot - um tio postiço dos mafagafinhos");
 };
 
 bot.onText( /\/start/, start);
