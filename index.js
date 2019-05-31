@@ -23,7 +23,7 @@ bot.on('message', (msg) => {     //O comando acima diz o que o bot faz quando re
 	//var random = Math.floor(Math.random() * answers.length);			
 	var x = Math.random()*100+1;
 	
-	if (msg.text.toLowerCase() == 'Mafagafo')){ //OPÇÕES - MAFAGAFO
+	if (msg.text.toLowerCase() == 'Mafagafo'){ //OPÇÕES - MAFAGAFO
 	bot.sendMessage(msg.chat.id, "A Revista Mafagafo é uma publicação digital de contos e noveletas de fantasia e ficção científica. Mais do que isso, a Mafagafo foi criada com foco no processo editorial. O material enviado para submissão é a matéria-prima e a revista publicada é o produto final. Nossa proposta é trabalhar no que fica entre um e outro, o processo editorial sério, o preparo cuidadoso do texto através do trabalho em equipe.")
     let replyMarkup = bot.inlineKeyboard([
         [
